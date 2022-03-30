@@ -9,7 +9,7 @@ export default function Homepage() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error</p>;
 
-  console.log(data);
+  console.log(data.reviews.data[0].attributes);
 
   return (
     <div>
@@ -21,7 +21,7 @@ export default function Homepage() {
           <small>console list</small>
 
           <p>{review.attributes.Body}</p>
-          <Link to={`/details${review.id}`}>Read more...</Link>
+          <Link to={`/details/${review.id}`}>Read more...</Link>
         </div>
       ))}
     </div>

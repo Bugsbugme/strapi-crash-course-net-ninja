@@ -28,9 +28,9 @@ function App() {
         <div className="App">
           <SiteHeader />
           <Routes>
-            <Route exact path="/" element={<Homepage />} />
+            <Route path="/" element={<Homepage />} />
 
-            <Route path="/details/:id" element={<ReviewDetails />} />
+            <Route path={"/details/:id"} element={<ReviewDetails />} />
 
             <Route path="/category/:id" element={<Category />} />
           </Routes>
